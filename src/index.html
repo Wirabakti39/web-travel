@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- output tailwind css -->
+    <link rel="stylesheet" href="../dist/output.css">
+    <!-- Alpine JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <title>Travel</title>
+</head>
+<body>
+    <!-- NAVBAR START -->
+    <nav x-data="{openNav : true}" class="py-9 px-4">
+        <div class="container mx-auto">
+            <div class="flex justify-between items-center">
+                <img src="../public/assets/logo.svg" alt="Logo" class="sm:order-2 lg:order-1">
+                <img @click="openNav = !openNav" src="../public/assets/toggle.svg" alt="Menu" class="sm:order-1 lg:hidden">
+                <div class="hidden lg:flex order-2 items-center">
+                    <ul class="flex gap-16 font-circularSTD">
+                        <li>
+                            <button class="text-sm font-bold text-abu">Home</button>
+                        </li>
+                        <li>
+                            <button class="text-sm font-bold text-abu opacity-50">Discover</button>
+                        </li>
+                        <li>
+                            <button class="text-sm font-bold text-abu opacity-50">Special Deals</button>
+                        </li>
+                        <li>
+                            <button class="text-sm font-bold text-abu opacity-50">Contact</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="order-3 hidden sm:block">
+                    <button class="grow bg-gray-100 px-8 py-4 rounded-full text-abu font-bold text-sm">Login</button>
+                    <button class="grow bg-ungu px-8 py-4 rounded-full text-white font-bold text-sm">Sign up</button>
+                </div>
+            </div>
+
+            <!-- NAVBBAR FOR MOBILE & TABLET DEVICE -->
+            <div x-show="openNav" x-data="{showLogin : false}" class="fixed bottom-0 left-0 right-0 p-4 border lg:hidden"
+                x-transition:enter="transition ease-out duration-300"
+                x-transition:enter-start="opacity-0 scale-90"
+                x-transition:enter-end="opacity-100 scale-100"
+                x-transition:leave="transition ease-in duration-300"
+                x-transition:leave-start="opacity-100 scale-100"
+                x-transition:leave-end="opacity-0 scale-90"
+            >
+                <ul class="flex justify-between font-circularSTD">
+                    <li>
+                        <button class="flex flex-col justify-center items-center gap-1">
+                            <ion-icon name="home-outline" class="text-2xl text-ungu"></ion-icon>
+                            <span class="text-base font-normal text-ungu">Home</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="flex flex-col justify-center items-center gap-1">
+                            <ion-icon name="albums-outline" class="text-2xl opacity-50 text-abu"></ion-icon>
+                            <span class="text-abu opacity-50 text-base font-normal">Discover</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="flex flex-col justify-center items-center gap-1">
+                            <ion-icon name="sparkles-outline" class="text-2xl opacity-50 text-abu"></ion-icon>
+                            <span class="text-abu opacity-50 text-base font-normal">Specials</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="flex flex-col justify-center items-center gap-1">
+                            <ion-icon name="person-outline" class="text-2xl opacity-50 text-abu"></ion-icon>
+                            <span class="text-abu opacity-50 text-base font-normal">Contact</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button @click="showLogin = !showLogin" class="flex flex-col justify-center items-center gap-1">
+                            <ion-icon name="menu-outline" class="text-2xl opacity-50 text-abu"></ion-icon>
+                            <span class="text-abu opacity-50 text-base font-normal">More</span>
+                        </button>
+                    </li>
+                </ul>
+                <!-- when more btn clicked, show this div -->
+                <div x-show="showLogin" class="flex absolute bottom-24 left-1/2 -translate-x-1/2 gap-5 w-2/3"
+                    x-transition:enter="transition ease-out duration-300"
+                    x-transition:enter-start="opacity-0 scale-90"
+                    x-transition:enter-end="opacity-100 scale-100"
+                    x-transition:leave="transition ease-in duration-300"
+                    x-transition:leave-start="opacity-100 scale-100"
+                    x-transition:leave-end="opacity-0 scale-90"
+                >
+                    <button class="grow bg-gray-100 px-8 py-4 rounded-full text-abu font-bold text-sm">Login</button>
+                    <button class="grow bg-ungu px-8 py-4 rounded-full text-white font-bold text-sm">Sign up</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- NABVBAR END -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</body>
+</html>
