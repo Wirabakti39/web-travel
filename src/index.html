@@ -17,11 +17,11 @@
 </head>
 <body>
     <!-- NAVBAR START -->
-    <nav x-data="{openNav : true}" class="py-9 px-4">
+    <nav x-data="{openNav : false}" class="py-9 px-4">
         <div class="container mx-auto">
             <div class="flex justify-between items-center">
-                <img src="../public/assets/logo.svg" alt="Logo" class="sm:order-2 lg:order-1">
-                <img @click="openNav = !openNav" src="../public/assets/toggle.svg" alt="Menu" class="sm:order-1 lg:hidden">
+                <img src="../public/assets/logo/logo.svg" alt="Logo" class="sm:order-2 lg:order-1">
+                <img @click="openNav = !openNav" src="../public/assets/icons/toggle.svg" alt="Menu" class="sm:order-1 lg:hidden">
                 <div class="hidden lg:flex order-2 items-center">
                     <ul class="flex gap-16 font-circularSTD">
                         <li>
@@ -45,7 +45,7 @@
             </div>
 
             <!-- NAVBBAR FOR MOBILE & TABLET DEVICE -->
-            <div x-show="openNav" x-data="{showLogin : false}" class="fixed bottom-0 left-0 right-0 p-4 border lg:hidden"
+            <div x-show="openNav" x-data="{showLogin : false}" class="z-50 fixed bottom-0 left-0 right-0 p-4 bg-white border lg:hidden"
                 x-transition:enter="transition ease-out duration-300"
                 x-transition:enter-start="opacity-0 scale-90"
                 x-transition:enter-end="opacity-100 scale-100"
@@ -101,6 +101,176 @@
         </div>
     </nav>
     <!-- NABVBAR END -->
+
+    <!-- HERO SECTION START -->
+     <section>
+        <div class="container mx-auto px-4 py-14">
+            <div class="grid grid-cols-12">
+                <div class="col-span-12 lg:col-span-4 order-2 lg:order-1">
+                    <div>
+                        <button class="flex items-center mx-auto lg:ml-0 gap-4 px-8 py-4 drop-shadow-sm-shadow rounded-full mb-4">
+                            <span class="text-sm font-bold font-circularSTD text-pink">Explore the World!</span>
+                            <img src="../public/assets/icons/work.svg" alt="" class="w-6 h-6">
+                        </button>
+                        <h1 class="font-bold text-[40px] text-abu md:text-[56px] leading-tight text-center lg:text-left mb-6">
+                            Travel <span class="text-pink">top destination</span> of the world
+                        </h1>
+                        <p class="text-center lg:text-left text-abu opacity-50 text-base md:text-lg">We always make our customer happy by providing as many choices as possible</p>
+                        <div class="flex flex-col gap-6 font-circularSTD mt-8 md:flex-row md:justify-center lg:justify-start md:gap-4">
+                            <button class="py-6 px-8 bg-ungu rounded-full text-white md:py-4">Get Started</button>
+                            <button class="py-6 px-8 rounded-full text-abu flex gap-2 bg-[#eee] justify-center items-center font-bold text-sm md:py-4">
+                                <img src="../public/assets/icons/play.svg" alt="" class="w-6 h-6">
+                                Watch Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-12 lg:col-span-8 order-1 lg:order-2 flex items-center justify-center">
+                    <div class="max-w-[772px] max-h-[713px]">
+                        <img src="../public/assets/img/hero.png" alt="">
+                    </div>
+                </div>
+                <div class="col-span-12 order-3 mt-8">
+                    <div class="flex py-8 sm:py-16 flex-wrap justify-center lg:justify-between gap-7">
+                        <img src="../public/assets/logo/tripadvisor.svg" class="h-5 sm:h-8" alt="">
+                        <img src="../public/assets/logo/expedia.svg" class="h-5 sm:h-8" alt="">
+                        <img src="../public/assets/logo/booking.svg" class="h-5 sm:h-8" alt="">
+                        <img src="../public/assets/logo/airbnb.svg" class="h-5 sm:h-8" alt="">
+                        <img src="../public/assets/logo/rbitz.svg" class="h-5 sm:h-8" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+    <!-- HERO SECTION END -->
+
+    <!-- SERVICE SECTION START-->
+     <section class="overflow-x-hidden">
+        <div class="container mx-auto px-4 py-8 md:py-16">
+            <div class="grid grid-cols-12 lg:w-screen">
+                <div class="col-span-12 lg:col-span-4 mb-8 md:mb-16 flex flex-col justify-center">
+                    <h1 class="font-circularSTD font-bold text-base md:text-2xl text-center lg:text-left text-pink tracking-[4px] mb-4">SERVICE</h1>
+                    <h2 class="font-circularSTD font-bold text-[32px] md:text-[40px] lg:text-[44px] text-center lg:text-left text-abu leading-tight">Our top value categories for you</h2>
+                </div>
+                <div class="col-span-12 lg:col-span-8 flex flex-col md:flex-row gap-4">
+                    <div class="flex flex-col gap-8 lg:gap-16 items-center p-8 md:p-16 rounded-[32px] border drop-shadow-sm-shadow bg-white">
+                        <img src="../public/assets/img/destination.png" class="w-16" alt="">
+                        <h3 class="text-center text-abu text-2xl md:text-[28px] font-bold font-circularSTD">Best Tour Guide</h3>
+                        <p class="text-center text-abu opacity-50 text-lg">What looked like a small patch of purple grass, above five feet.</p>
+                    </div>
+                    <div class="flex flex-col gap-8 lg:gap-16 items-center p-8 md:p-16 rounded-[32px] border drop-shadow-sm-shadow bg-white">
+                        <img src="../public/assets/img/booking.png" class="w-16" alt="">
+                        <h3 class="text-center text-abu text-2xl md:text-[28px] font-bold font-circularSTD">Easy Booking</h3>
+                        <p class="text-center text-abu opacity-50 text-lg">Square, was moving across the sand in their direction.</p>
+                    </div>
+                    <div class="flex flex-col gap-8 lg:gap-16 items-center p-8 md:p-16 rounded-[32px] border drop-shadow-sm-shadow bg-white">
+                        <img src="../public/assets/img/cloudy.png" class="w-16" alt="">
+                        <h3 class="text-center text-abu text-2xl md:text-[28px] font-bold font-circularSTD">Weather Forecast</h3>
+                        <p class="text-center text-abu opacity-50 text-lg">What looked like a small patch of purple grass, above five feet. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+    <!-- SERVICE SECTION END-->
+
+    <!-- TOP DESTINATION STRAT -->
+     <section>
+        <div class="container mx-auto px-4 py-8 md:py-16">
+            <div class="grid grid-cols-12">
+                <div class="col-span-12 flex flex-col xl:flex-row xl:justify-between gap-8 md:gap-16 mb-8 md:mb-16">
+                    <div>
+                        <h1 class="font-circularSTD font-bold text-base md:text-2xl text-center text-pink tracking-widest mb-4">Top Destination</h1>
+                        <h2 class="font-circularSTD font-bold text-[32px] md:text-[40px] lg:text-[44px] text-center text-abu leading-tight">Explore top destination</h2>
+                    </div>
+                    <div class="flex items-center justify-between md:justify-center gap-8">
+                        <div class="w-16 h-16 md:w-[100px] md:h-[100px] rounded-full bg-white drop-shadow-lg border flex items-center justify-center">
+                            <img src="../public/assets/icons/arrow-left.svg" class="md:w-6" alt="">
+                        </div>
+                        <div class="w-16 h-16 md:w-[100px] md:h-[100px] rounded-full bg-ungu drop-shadow-lg border flex items-center justify-center">
+                            <img src="../public/assets/icons/arrow-right.svg" class="md:w-6" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-12 flex flex-col justify-center gap-8 md:flex-row">
+                    <div class="flex flex-col bg-white drop-shadow-lg rounded-3xl">
+                        <img src="../public/assets/img/paradise-beach.jpg" alt="">
+                        <div class="p-8">
+                            <h2 class="font-circularSTD font-bold text-[23px] text-pink mb-2">$550.16</h2>
+                            <h1 class="font-circularSTD font-bold text-[23px] text-abu mb-1">Paradise Beach, Bantayan Island</h1>
+                            <h5 class="text-lg text-abu opacity-75 mb-14">Rome, Italy</h5>
+                            <span class="flex items-center gap-2 font-bold font-circularSTD text-[23px] text-orange absolute left-8 bottom-8">
+                                4.8
+                                <img src="../public/assets/icons/star.svg" alt="rating">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col bg-white drop-shadow-lg rounded-3xl">
+                        <img src="../public/assets/img/ocean-with-full-of-colors.jpg" alt="">
+                        <div class="p-8">
+                            <h2 class="font-circularSTD font-bold text-[23px] text-pink mb-2">$20.99</h2>
+                            <h1 class="font-circularSTD font-bold text-[23px] text-abu mb-1">Ocean with full of Colors</h1>
+                            <h5 class="text-lg text-abu opacity-75 mb-14">Maldives</h5>
+                            <span class="flex items-center gap-2 font-bold font-circularSTD text-[23px] text-orange absolute left-8 bottom-8">
+                                4.5
+                                <img src="../public/assets/icons/star.svg" alt="rating">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col bg-white drop-shadow-lg rounded-3xl">
+                        <img src="../public/assets/img/mountain-view.jpg" alt="">
+                        <div class="p-8">
+                            <h2 class="font-circularSTD font-bold text-[23px] text-pink mb-2">$150.99</h2>
+                            <h1 class="font-circularSTD font-bold text-[23px] text-abu mb-1">Mountain View, Above the cloud</h1>
+                            <h5 class="text-lg text-abu opacity-75 mb-14">United Arab Emeries</h5>
+                            <span class="flex items-center gap-2 font-bold font-circularSTD text-[23px] text-orange absolute left-8 bottom-8">
+                                5.0
+                                <img src="../public/assets/icons/star.svg" alt="rating">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+    <!-- TOP DESTINATION END -->
+
+    <!-- TRAVEL POINT START -->
+     <section>
+        <div class="container mx-auto px-4 py-8 md:py-16 md:px-8 xl:px-0">
+            <div class="grid grid-cols-12">
+                <div class="col-span-12 xl:col-span-7 w-full mb-16 xl:mb-0 xl:my-auto"> 
+                    <img src="../public/assets/img/img-travel-point.png" class="w-full" alt="Travel point img">
+                </div>
+                <div class="col-span-12 xl:col-span-5 flex flex-col gap-8 md:gap-16 items-center">
+                    <div>
+                        <h1 class="font-circularSTD font-bold text-center text-base md:text-2xl text-pink tracking-[4px] mb-4 xl:text-left">TRAVEL POINT</h1>
+                        <H2 class="font-circularSTD font-bold text-center text-[32px] text-abu md:text-[40px] xl:text-[44px] mb-8 xl:text-left">We helping you find your dream location</H2>
+                        <p class="text-base md:text-lg text-center text-abu opacity-50 xl:text-left">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 mt-8 w-full">
+                        <div class="col-span-2 md:col-span-1 p-8 rounded-[32px] bg-white drop-shadow-sm-shadow border">
+                            <h1 class="font-circularSTD font-bold text-center text-4xl text-orange mb-4">500+</h1>
+                            <p class="text-lg text-center text-abu">Holiday Package</p>
+                        </div>
+                        <div class="col-span-2 md:col-span-1 p-8 rounded-[32px] bg-white drop-shadow-sm-shadow border">
+                            <h1 class="font-circularSTD font-bold text-center text-4xl text-orange mb-4">100</h1>
+                            <p class="text-lg text-center text-abu">Luxury Hotel</p>
+                        </div>
+                        <div class="col-span-2 md:col-span-1 p-8 rounded-[32px] bg-white drop-shadow-sm-shadow border">
+                            <h1 class="font-circularSTD font-bold text-center text-4xl text-orange mb-4">7</h1>
+                            <p class="text-lg text-center text-abu">Premium Airlines</p>
+                        </div>
+                        <div class="col-span-2 md:col-span-1 p-8 rounded-[32px] bg-white drop-shadow-sm-shadow border">
+                            <h1 class="font-circularSTD font-bold text-center text-4xl text-orange mb-4">2k+</h1>
+                            <p class="text-lg text-center text-abu">Happy Customer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+    <!-- TRAVEL POINT END -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </body>
 </html>
