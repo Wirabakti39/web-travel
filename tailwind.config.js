@@ -20,6 +20,9 @@ module.exports = {
           '0px 34px 75px rgba(0,0,0, 0.07)',
           '0px 0px 0px rgba(0,0,0, 0.07)'
         ]
+      },
+      backgroundImage : {
+        "pp-client" : "url('./public/assets/img/testimonial-client-profile-photo.jpg')"
       }
     },
   },
