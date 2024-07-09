@@ -11,7 +11,8 @@ module.exports = {
         "ungu" : '#5D50C6',
         "pink" : '#F85E9F',
         "orange" : '#FF5722',
-        "abu" : '#222831'
+        "abu" : '#222831',
+        "krim" : '#FACD49' 
       },
       dropShadow : {
         "sm-shadow" : [
