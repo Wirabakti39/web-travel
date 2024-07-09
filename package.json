@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-    "built:css": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build:css": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build" : "npm run build:css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
